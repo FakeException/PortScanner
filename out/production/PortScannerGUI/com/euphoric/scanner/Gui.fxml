@@ -9,12 +9,12 @@
 <?import javafx.scene.text.Font?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="949.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:controller="com.euphoric.scanner.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="949.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="5.0" layoutY="484.0" prefHeight="31.0" prefWidth="591.0" promptText="IP ADDRESS" style="-fx-text-fill: green;" unFocusColor="WHITE" />
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="814.0" layoutY="34.0" promptText="START PORT" style="-fx-text-fill: white;" unFocusColor="WHITE" />
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="814.0" layoutY="133.0" promptText="END PORT" style="-fx-text-fill: white;" unFocusColor="WHITE" />
-      <JFXButton layoutX="814.0" layoutY="471.0" prefHeight="88.0" prefWidth="135.0" style="-fx-background-color: yellow;" text="SCAN" />
+      <JFXTextField fx:id="ip" focusColor="WHITE" labelFloat="true" layoutX="5.0" layoutY="484.0" prefHeight="31.0" prefWidth="591.0" promptText="IP ADDRESS" style="-fx-text-fill: green;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="start" focusColor="WHITE" labelFloat="true" layoutX="814.0" layoutY="34.0" promptText="START PORT" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="end" focusColor="WHITE" labelFloat="true" layoutX="814.0" layoutY="133.0" promptText="END PORT" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+      <JFXButton fx:id="button" layoutX="814.0" layoutY="471.0" prefHeight="88.0" prefWidth="135.0" style="-fx-background-color: yellow;" text="SCAN" onAction="#onClick" />
       <Label layoutX="346.0" layoutY="1.0" prefHeight="117.0" prefWidth="250.0" text="PORT SCANNER" textFill="WHITE">
          <font>
             <Font size="34.0" />
@@ -30,7 +30,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <JFXTextArea layoutX="5.0" layoutY="245.0" prefHeight="218.0" prefWidth="943.0" style="-fx-background-color: gray;" />
+      <JFXTextArea fx:id="console" layoutX="5.0" layoutY="245.0" prefHeight="218.0" prefWidth="943.0" style="-fx-background-color: gray;" />
       <Label layoutX="5.0" layoutY="219.0" prefHeight="25.0" prefWidth="59.0" text="Console" textFill="WHITE">
          <font>
             <Font size="15.0" />
