@@ -12,6 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Gui.fxml"));
         primaryStage.setTitle("Port Scanner");
+        primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root, 949, 565));
         primaryStage.show();
     }
