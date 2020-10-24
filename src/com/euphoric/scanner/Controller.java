@@ -33,13 +33,13 @@ public class Controller {
         console.clear();
         new Thread(() -> {
             final ExecutorService es = Executors.newFixedThreadPool(20);
-            final int timeout = 200;
+            final int timeout = 150;
             final List<Future<ScanResult>> futures = new ArrayList<>();
             for (int port = Integer.parseInt(start.getText()); port <= Integer.parseInt(end.getText()); port++) {
                 futures.add(portIsOpen(es, ip.getText(), port, timeout));
             }
             try {
-                es.awaitTermination(200L, TimeUnit.MILLISECONDS);
+                es.awaitTermination(150L, TimeUnit.MILLISECONDS);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
